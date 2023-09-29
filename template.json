@@ -1,0 +1,1751 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name": {
+            "defaultValue": "UDR-CAC-GSPALFRESC-Production-PaaS02",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/routeTables",
+            "apiVersion": "2023-04-01",
+            "name": "[parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name')]",
+            "location": "canadacentral",
+            "properties": {
+                "disableBgpRoutePropagation": false,
+                "routes": [
+                    {
+                        "name": "Default-Route",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), 'Default-Route')]",
+                        "properties": {
+                            "addressPrefix": "0.0.0.0/0",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "10.180.253.149",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "70_37_57_58_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '70_37_57_58_32')]",
+                        "properties": {
+                            "addressPrefix": "70.37.57.58/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_178_177_147_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_178_177_147_32')]",
+                        "properties": {
+                            "addressPrefix": "52.178.177.147/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_165_154_193_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_165_154_193_32')]",
+                        "properties": {
+                            "addressPrefix": "52.165.154.193/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_44_129_255_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_44_129_255_32')]",
+                        "properties": {
+                            "addressPrefix": "104.44.129.255/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_187_56_50_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_187_56_50_32')]",
+                        "properties": {
+                            "addressPrefix": "52.187.56.50/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_89_171_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_89_171_0_32')]",
+                        "properties": {
+                            "addressPrefix": "13.89.171.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_44_134_255_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_44_134_255_32')]",
+                        "properties": {
+                            "addressPrefix": "104.44.134.255/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_140_210_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_140_210_128_32')]",
+                        "properties": {
+                            "addressPrefix": "51.140.210.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "23_96_195_3_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '23_96_195_3_32')]",
+                        "properties": {
+                            "addressPrefix": "23.96.195.3/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_165_153_122_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_165_153_122_32')]",
+                        "properties": {
+                            "addressPrefix": "52.165.153.122/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_94_149_179_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_94_149_179_32')]",
+                        "properties": {
+                            "addressPrefix": "13.94.149.179/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_140_146_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_140_146_64_32')]",
+                        "properties": {
+                            "addressPrefix": "51.140.146.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_112_242_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_112_242_192_32')]",
+                        "properties": {
+                            "addressPrefix": "40.112.242.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_70_73_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_70_73_128_32')]",
+                        "properties": {
+                            "addressPrefix": "13.70.73.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_165_158_140_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_165_158_140_32')]",
+                        "properties": {
+                            "addressPrefix": "52.165.158.140/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_225_177_153_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_225_177_153_32')]",
+                        "properties": {
+                            "addressPrefix": "52.225.177.153/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "157_55_208_185_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '157_55_208_185_32')]",
+                        "properties": {
+                            "addressPrefix": "157.55.208.185/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_75_34_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_75_34_192_32')]",
+                        "properties": {
+                            "addressPrefix": "13.75.34.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "65_52_250_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '65_52_250_128_32')]",
+                        "properties": {
+                            "addressPrefix": "65.52.250.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "20_36_114_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '20_36_114_64_32')]",
+                        "properties": {
+                            "addressPrefix": "20.36.114.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_78_194_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_78_194_128_32')]",
+                        "properties": {
+                            "addressPrefix": "40.78.194.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_70_146_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_70_146_128_32')]",
+                        "properties": {
+                            "addressPrefix": "40.70.146.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_165_152_214_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_165_152_214_32')]",
+                        "properties": {
+                            "addressPrefix": "52.165.152.214/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_67_8_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_67_8_128_32')]",
+                        "properties": {
+                            "addressPrefix": "13.67.8.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_231_146_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_231_146_128_32')]",
+                        "properties": {
+                            "addressPrefix": "52.231.146.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_211_81_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_211_81_64_32')]",
+                        "properties": {
+                            "addressPrefix": "104.211.81.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "191_233_203_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '191_233_203_64_32')]",
+                        "properties": {
+                            "addressPrefix": "191.233.203.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_120_99_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_120_99_0_32')]",
+                        "properties": {
+                            "addressPrefix": "51.120.99.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_83_121_56_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_83_121_56_32')]",
+                        "properties": {
+                            "addressPrefix": "40.83.121.56/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_94_141_115_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_94_141_115_32')]",
+                        "properties": {
+                            "addressPrefix": "13.94.141.115/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_74_100_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_74_100_64_32')]",
+                        "properties": {
+                            "addressPrefix": "40.74.100.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "191_236_154_88_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '191_236_154_88_32')]",
+                        "properties": {
+                            "addressPrefix": "191.236.154.88/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_178_195_197_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_178_195_197_32')]",
+                        "properties": {
+                            "addressPrefix": "52.178.195.197/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_211_146_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_211_146_128_32')]",
+                        "properties": {
+                            "addressPrefix": "104.211.146.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_187_63_19_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_187_63_19_32')]",
+                        "properties": {
+                            "addressPrefix": "52.187.63.19/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "20_37_74_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '20_37_74_128_32')]",
+                        "properties": {
+                            "addressPrefix": "20.37.74.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_69_64_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_69_64_128_32')]",
+                        "properties": {
+                            "addressPrefix": "13.69.64.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_178_184_149_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_178_184_149_32')]",
+                        "properties": {
+                            "addressPrefix": "52.178.184.149/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_178_190_65_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_178_190_65_32')]",
+                        "properties": {
+                            "addressPrefix": "52.178.190.65/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_174_22_21_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_174_22_21_32')]",
+                        "properties": {
+                            "addressPrefix": "52.174.22.21/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_79_130_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_79_130_64_32')]",
+                        "properties": {
+                            "addressPrefix": "40.79.130.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_107_58_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_107_58_192_32')]",
+                        "properties": {
+                            "addressPrefix": "51.107.58.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_78_109_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_78_109_0_32')]",
+                        "properties": {
+                            "addressPrefix": "13.78.109.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_79_178_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_79_178_128_32')]",
+                        "properties": {
+                            "addressPrefix": "40.79.178.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_75_127_117_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_75_127_117_32')]",
+                        "properties": {
+                            "addressPrefix": "13.75.127.117/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "23_102_135_246_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '23_102_135_246_32')]",
+                        "properties": {
+                            "addressPrefix": "23.102.135.246/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_71_13_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_71_13_64_32')]",
+                        "properties": {
+                            "addressPrefix": "40.71.13.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "20_36_106_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '20_36_106_128_32')]",
+                        "properties": {
+                            "addressPrefix": "20.36.106.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_69_106_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_69_106_128_32')]",
+                        "properties": {
+                            "addressPrefix": "40.69.106.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_83_125_161_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_83_125_161_32')]",
+                        "properties": {
+                            "addressPrefix": "40.83.125.161/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_94_143_126_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_94_143_126_32')]",
+                        "properties": {
+                            "addressPrefix": "13.94.143.126/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_162_106_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_162_106_192_32')]",
+                        "properties": {
+                            "addressPrefix": "52.162.106.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_231_18_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_231_18_64_32')]",
+                        "properties": {
+                            "addressPrefix": "52.231.18.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_66_140_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_66_140_0_32')]",
+                        "properties": {
+                            "addressPrefix": "13.66.140.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_44_129_141_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_44_129_141_32')]",
+                        "properties": {
+                            "addressPrefix": "104.44.129.141/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_187_63_37_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_187_63_37_32')]",
+                        "properties": {
+                            "addressPrefix": "52.187.63.37/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_116_58_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_116_58_192_32')]",
+                        "properties": {
+                            "addressPrefix": "51.116.58.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_208_54_11_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_208_54_11_32')]",
+                        "properties": {
+                            "addressPrefix": "104.208.54.11/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_71_170_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_71_170_64_32')]",
+                        "properties": {
+                            "addressPrefix": "13.71.170.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_77_50_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_77_50_128_32')]",
+                        "properties": {
+                            "addressPrefix": "13.77.50.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "65_52_172_237_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '65_52_172_237_32')]",
+                        "properties": {
+                            "addressPrefix": "65.52.172.237/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_69_227_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_69_227_128_32')]",
+                        "properties": {
+                            "addressPrefix": "13.69.227.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_187_59_251_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_187_59_251_32')]",
+                        "properties": {
+                            "addressPrefix": "52.187.59.251/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "40_83_120_64_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '40_83_120_64_32')]",
+                        "properties": {
+                            "addressPrefix": "40.83.120.64/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "20_102_188_65_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '20_102_188_65_32')]",
+                        "properties": {
+                            "addressPrefix": "20.102.188.65/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_224_105_172_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_224_105_172_32')]",
+                        "properties": {
+                            "addressPrefix": "52.224.105.172/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "104_44_129_243_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '104_44_129_243_32')]",
+                        "properties": {
+                            "addressPrefix": "104.44.129.243/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "13_71_194_129_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '13_71_194_129_32')]",
+                        "properties": {
+                            "addressPrefix": "13.71.194.129/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_107_154_192_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_107_154_192_32')]",
+                        "properties": {
+                            "addressPrefix": "51.107.154.192/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "191_233_50_128_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '191_233_50_128_32')]",
+                        "properties": {
+                            "addressPrefix": "191.233.50.128/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "52_151_25_45_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '52_151_25_45_32')]",
+                        "properties": {
+                            "addressPrefix": "52.151.25.45/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_116_155_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_116_155_0_32')]",
+                        "properties": {
+                            "addressPrefix": "51.116.155.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "51_120_219_0_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '51_120_219_0_32')]",
+                        "properties": {
+                            "addressPrefix": "51.120.219.0/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    },
+                    {
+                        "name": "23.102.188.65_32",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '23.102.188.65_32')]",
+                        "properties": {
+                            "addressPrefix": "23.102.188.65/32",
+                            "nextHopType": "Internet",
+                            "hasBgpOverride": false
+                        },
+                        "type": "Microsoft.Network/routeTables/routes"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_208_54_11_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.208.54.11/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_211_146_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.211.146.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_211_81_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.211.81.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_44_129_141_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.44.129.141/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_44_129_243_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.44.129.243/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_44_129_255_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.44.129.255/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/104_44_134_255_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "104.44.134.255/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_66_140_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.66.140.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_67_8_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.67.8.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_69_227_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.69.227.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_69_64_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.69.64.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_70_73_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.70.73.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_71_170_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.71.170.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_71_194_129_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.71.194.129/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_75_127_117_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.75.127.117/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_75_34_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.75.34.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_77_50_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.77.50.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_78_109_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.78.109.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_89_171_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.89.171.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_94_141_115_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.94.141.115/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_94_143_126_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.94.143.126/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/13_94_149_179_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "13.94.149.179/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/157_55_208_185_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "157.55.208.185/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/191_233_203_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "191.233.203.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/191_233_50_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "191.233.50.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/191_236_154_88_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "191.236.154.88/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/20_102_188_65_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "20.102.188.65/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/20_36_106_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "20.36.106.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/20_36_114_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "20.36.114.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/20_37_74_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "20.37.74.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/23.102.188.65_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "23.102.188.65/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/23_102_135_246_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "23.102.135.246/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/23_96_195_3_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "23.96.195.3/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_112_242_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.112.242.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_69_106_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.69.106.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_70_146_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.70.146.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_71_13_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.71.13.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_74_100_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.74.100.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_78_194_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.78.194.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_79_130_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.79.130.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_79_178_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.79.178.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_83_120_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.83.120.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_83_121_56_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.83.121.56/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/40_83_125_161_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "40.83.125.161/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_107_154_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.107.154.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_107_58_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.107.58.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_116_155_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.116.155.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_116_58_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.116.58.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_120_219_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.120.219.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_120_99_0_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.120.99.0/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_140_146_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.140.146.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/51_140_210_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "51.140.210.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_151_25_45_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.151.25.45/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_162_106_192_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.162.106.192/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_165_152_214_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.165.152.214/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_165_153_122_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.165.153.122/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_165_154_193_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.165.154.193/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_165_158_140_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.165.158.140/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_174_22_21_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.174.22.21/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_178_177_147_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.178.177.147/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_178_184_149_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.178.184.149/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_178_190_65_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.178.190.65/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_178_195_197_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.178.195.197/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_187_56_50_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.187.56.50/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_187_59_251_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.187.59.251/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_187_63_19_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.187.63.19/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_187_63_37_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.187.63.37/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_224_105_172_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.224.105.172/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_225_177_153_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.225.177.153/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_231_146_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.231.146.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/52_231_18_64_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "52.231.18.64/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/65_52_172_237_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "65.52.172.237/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/65_52_250_128_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "65.52.250.128/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/70_37_57_58_32')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "70.37.57.58/32",
+                "nextHopType": "Internet",
+                "hasBgpOverride": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/routeTables/routes",
+            "apiVersion": "2023-04-01",
+            "name": "[concat(parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'), '/Default-Route')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/routeTables', parameters('routeTables_UDR_CAC_GSPALFRESC_Production_PaaS02_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "0.0.0.0/0",
+                "nextHopType": "VirtualAppliance",
+                "nextHopIpAddress": "10.180.253.149",
+                "hasBgpOverride": false
+            }
+        }
+    ]
+}
